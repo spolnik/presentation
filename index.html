@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
     <link rel="stylesheet" href="https://revealjs.com/css/theme/black.css">
+    <link rel="stylesheet" href="https://revealjs.com/lib/css/zenburn.css">
 </head>
 
 <body>
@@ -26,6 +27,30 @@
             <img data-src="img/nginx.png" height="100"><img data-src="img/consul.png" height="100">
         </section>
         <section>
+            <section>
+                <h2>Old way</h2>
+                <img data-src="img/f5.png" height="100"><img data-src="img/f5.png" height="100">
+            </section>
+            <section>
+                <img data-src="img/old_state.png">
+            </section>
+            <section>
+                <h2>Problems</h2>
+            </section>
+            <section>
+                <p>Hardcoded host within LTMs</p>
+                <p>Network changes required</p>
+                <p>Opening many firewall rules</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>New way</h2>
+                <img data-src="img/nginx.png" height="100"><img data-src="img/consul.png" height="100">
+            </section>
+            <section>
+                <img data-src="img/new_state.png">
+            </section>
             <section>
                 <h2>Benefits</h2>
                 <img data-src="img/nginx.png" height="100"><img data-src="img/consul.png" height="100">
@@ -57,20 +82,31 @@
         </section>
         <section>
             <section>
-                <h2>Old way</h2>
-                <img data-src="img/f5.png" height="100"><img data-src="img/f5.png" height="100">
-            </section>
-            <section>
-                <img data-src="img/old_state.png">
-            </section>
-        </section>
-        <section>
-            <section>
-                <h2>New way</h2>
+                <h2>Adding new Service</h2>
                 <img data-src="img/nginx.png" height="100"><img data-src="img/consul.png" height="100">
             </section>
             <section>
-                <img data-src="img/new_state.png">
+                <h3>Requirements</h3>
+                <p>HTTPS + re-use app port</p>
+                <p>Cluster aware Consul agent on same machine</p>
+            </section>
+            <section>
+                <p>Service Definition</p>
+                <pre><code data-trim data-noescape>
+                    {
+                      "service": {
+                        "name": "microservice",
+                        "tags": ["primary"],
+                        "port": 8000,
+                        "checks": [
+                          {
+                            "script": "/usr/local/bin/healthcheck.sh",
+                            "interval": "10s"
+                          }
+                        ]
+                      }
+                    }
+                </code></pre>
             </section>
         </section>
         <section>
@@ -80,12 +116,16 @@
             </section>
             <section>
                 <p>Consul Web UI</p>
+                <p><a href="https://todo">Live Demo</a></p>
             </section>
             <section>
                 <p>Consul Logs</p>
+                <p><a href="https://todo">Live Demo</a></p>
             </section>
             <section>
                 <p>Nginx & Consul-Template Logs</p>
+                <p><a href="https://todo">Nginx Logs Live Demo</a></p>
+                <p><a href="https://todo">Consul-Template Live Demo</a></p>
             </section>
         </section>
         <section>
