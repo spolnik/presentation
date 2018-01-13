@@ -24,36 +24,38 @@
     <div class="slides">
         <section>
             <h2>Intro</h2>
-            <img data-src="img/nginx.png" height="100"><img data-src="img/consul.png" height="100">
+            <img data-src="img/nginx.png" height="150"><img data-src="img/consul.png" height="150">
         </section>
         <section>
             <section>
                 <h2>Old way</h2>
-                <img data-src="img/F5.png" height="100"><img data-src="img/F5.png" height="100">
+                <img data-src="img/F5.png" height="150"><img data-src="img/F5.png" height="150">
             </section>
             <section>
                 <img data-src="img/old_state.png">
             </section>
             <section>
-                <h2>Problems</h2>
-            </section>
-            <section>
-                <p>Hardcoded host within LTMs</p>
-                <p>Network changes required</p>
-                <p>Opening many firewall rules</p>
+                <h3>Problems</h3>
+                <ul>
+                    <li>Hardcoded host within LTMs</li>
+                    <li>Network changes required</li>
+                    <li>Opening many firewall rules</li>
+                </ul>
             </section>
         </section>
         <section>
             <section>
                 <h2>New way</h2>
-                <img data-src="img/nginx.png" height="100"><img data-src="img/consul.png" height="100">
+                <img data-src="img/nginx.png" height="150"><img data-src="img/consul.png" height="150">
             </section>
             <section>
                 <img data-src="img/new_state.png">
             </section>
+        </section>
+        <section>
             <section>
                 <h2>Benefits</h2>
-                <img data-src="img/nginx.png" height="100"><img data-src="img/consul.png" height="100">
+                <img data-src="img/nginx.png" height="150"><img data-src="img/consul.png" height="150">
             </section>
             <section>
                 <h3>No more network dependencies</h3>
@@ -73,7 +75,7 @@
             </section>
             <section>
                 <h3>Prod like infra everywhere</h3>
-                <p>Keep same load balancing, routes and configuration across all environemtns</p>
+                <p>Keep same load balancing, routes and configuration across all environments</p>
             </section>
             <section>
                 <h3>Hosted within Neo</h3>
@@ -83,12 +85,14 @@
         <section>
             <section>
                 <h2>Adding new Service</h2>
-                <img data-src="img/nginx.png" height="100"><img data-src="img/consul.png" height="100">
+                <img data-src="img/nginx.png" height="150"><img data-src="img/consul.png" height="150">
             </section>
             <section>
                 <h3>Requirements</h3>
-                <p>HTTPS + re-use app port</p>
-                <p>Cluster aware Consul agent on same machine</p>
+                <ul>
+                    <li>HTTPS + re-use app port</li>
+                    <li>Cluster aware Consul agent on same machine</li>
+                </ul>
             </section>
             <section>
                 <p>Service Definition</p>
@@ -112,7 +116,7 @@
         <section>
             <section>
                 <h2>Troubleshooting</h2>
-                <img data-src="img/nginx.png" height="100"><img data-src="img/consul.png" height="100">
+                <img data-src="img/nginx.png" height="150"><img data-src="img/consul.png" height="150">
             </section>
             <section>
                 <p>Consul Web UI</p>
@@ -124,14 +128,16 @@
             </section>
             <section>
                 <p>Nginx & Consul-Template Logs</p>
-                <p><a href="https://todo">Nginx Logs Live Demo</a></p>
-                <p><a href="https://todo">Consul-Template Live Demo</a></p>
+                <ul>
+                    <li><a href="https://todo">Nginx Logs Live Demo</a></li>
+                    <li><a href="https://todo">Consul-Template Live Demo</a></li>
+                </ul>
             </section>
         </section>
         <section>
             <section>
                 <h2>Advanced Topics</h2>
-                <img data-src="img/nginx.png" height="100"><img data-src="img/consul.png" height="100">
+                <img data-src="img/nginx.png" height="150"><img data-src="img/consul.png" height="150">
             </section>
             <section>
                 <p>Healthcheck</p>
